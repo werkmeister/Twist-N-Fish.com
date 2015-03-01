@@ -1,8 +1,6 @@
 section.instructions {
   background: $primary-blue;
-  /*background: #e6f4ff;*/
   min-height: 100%;
-  margin-bottom: 75px;
 
   h4.media-heading {
     color: $primary-orange;
@@ -20,9 +18,13 @@ section.instructions {
     vertical-align: middle;
   }
 
-  .instructions-body p {
-    color: $light-gray;
-    font-family: 'Slabo 27px', serif;
-    font-size: 1.5em;
+  .instructions-body {
+    margin-top: 100px;
+
+    p {
+      color: $light-gray;
+      font-family: 'Slabo 27px', serif;
+      font-size: 1.5em;
+    }
   }
 }
