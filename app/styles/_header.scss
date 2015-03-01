@@ -1,0 +1,130 @@
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 0 115px;
+  font-family: 'Comfortaa', cursive;
+  margin-top: 15px;
+  z-index: 999;
+  
+  img {
+    width: 150px;
+    position: absolute;
+  }
+
+  .nav {
+    margin-bottom: 0;
+    > li {
+      > a {
+        font-size: 20px;
+        padding: 5px 2px;
+        margin: $nav-link-margin;
+        border-radius: 0;
+        &:hover,
+        &:focus {
+          background: none;
+          border-bottom: 1px solid $primary-orange;
+        }
+        &.buy {
+          color: $primary-orange;
+        }
+      }
+
+      // Disabled state sets text to gray and nukes hover/tab effects
+      &.disabled > a {
+        color: $nav-disabled-link-color;
+
+        &:hover,
+        &:focus {
+          color: $nav-disabled-link-hover-color;
+          text-decoration: none;
+          background-color: transparent;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .nav-pills {
+    > li {
+      > a {
+      }
+      + li {
+      }
+      // Active state
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: $nav-pills-active-link-hover-color;
+          background: none;
+          border-bottom: 1px solid $primary-orange;
+        }
+      }
+    }
+  }
+}
+
+
+// .header {
+//   margin: 20px auto;
+//   .nav {
+//     margin-top: 20px;
+//   }
+//   .logo {
+//     margin-top: -5px;
+//     width: 150px;
+//   }
+// }
+//
+//
+// .nav {
+//   margin-bottom: 0;
+//   > li {
+//     > a {
+//       font-size: 20px;
+//       padding: 5px 2px;
+//       margin: $nav-link-margin;
+//       border-radius: 0;
+//       &:hover,
+//       &:focus {
+//         background: none;
+//         border-bottom: 1px solid $brand-warning;
+//       }
+//       &.buy {
+//         color: $attention-orange;
+//       }
+//     }
+//
+//     // Disabled state sets text to gray and nukes hover/tab effects
+//     &.disabled > a {
+//       color: $nav-disabled-link-color;
+//
+//       &:hover,
+//       &:focus {
+//         color: $nav-disabled-link-hover-color;
+//         text-decoration: none;
+//         background-color: transparent;
+//         cursor: not-allowed;
+//       }
+//     }
+//   }
+// }
+//
+// .nav-pills {
+//   > li {
+//     > a {
+//     }
+//     + li {
+//     }
+//     // Active state
+//     &.active > a {
+//       &,
+//       &:hover,
+//       &:focus {
+//         color: $nav-pills-active-link-hover-color;
+//         background: none;
+//         border-bottom: 1px solid $brand-warning;
+//       }
+//     }
+//   }
+// }

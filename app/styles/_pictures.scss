@@ -1,0 +1,13 @@
+section.pictures {
+  min-height: 100%;
+  background: $primary-blue;
+  padding-top: 175px;
+
+  .gallery-column {
+    img {
+      width: 100%;
+      border: 5px solid $secondary-blue;
+      margin-bottom: 30px;
+    }
+  }
+}
