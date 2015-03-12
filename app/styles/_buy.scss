@@ -1,0 +1,27 @@
+section.buy {
+  min-height: 100%;
+  background: $primary-blue;
+  padding-top: 125px;
+  padding-bottom: 50px;
+
+  h1 {
+    color: $secondary-blue;
+    font-family: 'Comfortaa', cursive;
+  }
+
+  .orderbutton {
+    font-family: 'Comfortaa', cursive;
+    margin-top: 15px;
+    color: white;
+  }
+
+  .row:not(:first-of-type) {
+    margin-top: 35px;
+
+    .text-right {
+      img {
+        border: 5px solid $secondary-blue;
+      }
+    }
+  }
+}
