@@ -40,7 +40,7 @@
     <div class="header">
       <img src="./images/webLogo.png" class="pull-left"/>
       <ul class="nav nav-pills pull-right">
-        <li class="active"><a href="#" data-target="home">Home</a></li>
+        <li class="active home"><a href="#" data-target="home">Home</a></li>
         <li><a href="#" data-target="pictures">Pictures</a></li>
         <li><a href="#" class="buy" data-target="buy">Buy</a></li>
       </ul>
@@ -317,8 +317,13 @@
         e.preventDefault();
         e.stopPropagation();
 
-        $(target.parentElement).siblings('.active').removeClass('active');
-        $(target.parentElement).addClass('active');
+        if ( $(this).hasClass('btn-buy') ) {
+          $($.find('a.buy')).parent().addClass('active');
+          $($.find('li.home')).removeClass('active');
+        } else {
+          $(target.parentElement).siblings('.active').removeClass('active');
+          $(target.parentElement).addClass('active');
+        }
 
         $('body').find('.visible').removeClass('visible').addClass('hidden');
 
