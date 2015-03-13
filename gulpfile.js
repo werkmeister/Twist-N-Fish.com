@@ -3,6 +3,7 @@
 // generated on 2015-02-23 using generator-gulp-webapp 0.3.0
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var bowerfiles = require('main-bower-files');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
@@ -57,7 +58,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('fonts', function () {
-  return gulp.src(require('main-bower-files')({
+  return gulp.src(bowerfiles({
     filter: '**/*.{eot,svg,ttf,woff,woff2}'
   }).concat('app/fonts/**/*'))
     .pipe(gulp.dest('.tmp/fonts'))
